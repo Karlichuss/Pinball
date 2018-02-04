@@ -40,7 +40,7 @@ public class FlipperScript : MonoBehaviour {
         else
         {
             spring.targetPosition = restPosition;
-            GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().PlayDelayed(0.01f);
         }
 
         hingeJoint.spring = spring;

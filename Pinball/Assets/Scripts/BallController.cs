@@ -14,13 +14,22 @@ public class BallController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        // Reproducimos en bucle el sonido de la bola rodando hasta que esta deje de entrar en contacto con el suelo
+        GetComponent<AudioSource>().Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        GetComponent<AudioSource>().volume = Mathf.Clamp((GetComponent<Rigidbody>().velocity.x + GetComponent<Rigidbody>().velocity.z) * volumen, 0, 1);
+        if (GetComponent<Transform>().position.y >= 1)
+        {
+            // Calculamos el volumen del sonido del rozamiento de la bola con el suelo segun su velocidad de movimiento
+            GetComponent<AudioSource>().volume = Mathf.Clamp((GetComponent<Rigidbody>().velocity.x + GetComponent<Rigidbody>().velocity.z) * volumen, 0, 1);
+        }
+        else
+        {
+            // Silenciamos el sonido de la bola rodando en el suelo, ya que esta en el aire
+            GetComponent<AudioSource>().volume = 0;
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -60,7 +69,7 @@ public class BallController : MonoBehaviour
             // Instanciamos el humo
             Instantiate(steam, collision.gameObject.transform.position, Quaternion.identity);
         }
-        else if (collision.gameObject.tag.Equals("Ship") && GameManager.level < 5)
+        else if (collision.gameObject.tag.Equals("Ship"))
         {
             // Puntuamos
             GameManager.score += 25;
@@ -73,7 +82,7 @@ public class BallController : MonoBehaviour
             // Destruimos el barco
             //collision.gameObject.SetActive(false);
         }
-        else if (collision.gameObject.tag.Equals("Ship") && GameManager.level == 5)
+        else if (collision.gameObject.tag.Equals("Ship"))
         {
             // Puntuamos
             GameManager.score += 150;
@@ -93,8 +102,6 @@ public class BallController : MonoBehaviour
         {
             // Reproducimos el sonido de la colision
             collision.gameObject.GetComponent<AudioSource>().Play();
-            // Reproducimos en bucle el sonido de la bola rodando hasta que esta deje de entrar en contacto con el suelo
-            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -102,8 +109,7 @@ public class BallController : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Floor"))
         {
-            // Detenemos el sonido de la bola rodando en el suelo, ya que esta en el aire
-            GetComponent<AudioSource>().Stop();
+            
         }
     }
 

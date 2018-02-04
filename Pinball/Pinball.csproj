@@ -248,11 +248,13 @@
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
     <Compile Include="Assets\Scripts\BallController.cs" />
     <Compile Include="Assets\Scripts\BoundEndBottomScript.cs" />
+    <Compile Include="Assets\Scripts\ExtraPlungerScript.cs" />
     <Compile Include="Assets\Scripts\FlipperScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InterfacePinball.cs" />
     <Compile Include="Assets\Scripts\PlungerScript.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\TrapController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />

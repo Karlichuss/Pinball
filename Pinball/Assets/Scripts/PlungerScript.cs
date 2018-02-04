@@ -24,8 +24,6 @@ public class PlungerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        powerSlider.value = power;
-
         if (ballReady)
         {
             ballReady = true;
@@ -47,6 +45,11 @@ public class PlungerScript : MonoBehaviour
             ballReady = false;
             power = 0.0f;
         }
+    }
+
+    private void LateUpdate()
+    {
+        powerSlider.value = power;
     }
 
     private void OnTriggerEnter(Collider other)

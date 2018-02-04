@@ -110,7 +110,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 28454841f3545174ea79e2d3f9928a62, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7a15c86f67e4b75439a09594f89afc53, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -118,7 +118,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 12
+  Priority: 1
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -195,7 +195,7 @@ MonoBehaviour:
   explosion: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
   steam: {fileID: 100000, guid: b6fecef6c92b67147b638a07ef91195b, type: 2}
   fireworks: {fileID: 100006, guid: ccbcfc705a39717429590a9f247ec30a, type: 2}
-  volumen: 10
+  volumen: 50
 --- !u!135 &135792500614798628
 SphereCollider:
   m_ObjectHideFlags: 1

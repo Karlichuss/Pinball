@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 400010}
   - component: {fileID: 11400002}
   - component: {fileID: 11400000}
+  - component: {fileID: 114975749311492648}
   m_Layer: 0
   m_Name: ExplosionMobile
   m_TagString: Untagged
@@ -13640,3 +13641,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100010}
   m_IsPrefabParent: 1
+--- !u!114 &114975749311492648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29014cd42b6d273408e0ceefd336c0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDuration: 5
+  maxDuration: 5

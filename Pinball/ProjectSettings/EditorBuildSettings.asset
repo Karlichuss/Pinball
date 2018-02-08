@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PinballCustom.unity
+    guid: d3fe4a4294b236b47bb122bd59b5a1d5
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 029184056d8a10944a5559297d6de0c9
+  - enabled: 1
+    path: Assets/Scenes/GameOverMenu.unity
+    guid: 8e539f120df94504f9dbfefe2adbf5df

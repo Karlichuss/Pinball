@@ -33,8 +33,12 @@ public class ExtraPlungerScript : MonoBehaviour
         // Pausamos 0.5 segundos para dar tiempo a que la bola salga del plunger
         yield return new WaitForSeconds(0.5f);
 
-        // Cerramos la trampilla para que este extra no pueda volver a usarse
-        trap.gameObject.GetComponent<Animation>().Play();
+        if (GameManager.level >= 2 && !GameManager.trap1Activated)
+        {
+            GameManager.trap1Activated = true;
+            // Cerramos la trampilla para que este extra no pueda volver a usarse
+            trap.gameObject.GetComponent<Animation>().Play();
+        }
     }
 
     // Update is called once per frame

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 136342226853260854}
   - component: {fileID: 23213443079611832}
   - component: {fileID: 82809834452347446}
+  - component: {fileID: 114910724222009930}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -164,6 +165,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114910724222009930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769125257420050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24006f8431efc3245871be7d4ee81ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136342226853260854
 CapsuleCollider:
   m_ObjectHideFlags: 1

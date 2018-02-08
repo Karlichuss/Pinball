@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 135792500614798628}
   - component: {fileID: 23698204135789420}
   - component: {fileID: 54053871209299188}
-  - component: {fileID: 114349477333600082}
   - component: {fileID: 82533195803290328}
+  - component: {fileID: 114357532922571332}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -118,7 +118,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 1
+  Priority: 10
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -168,7 +168,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -181,7 +181,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114349477333600082
+--- !u!114 &114357532922571332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -192,10 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841d29899cf71ef4a84c6063f14a3013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
-  steam: {fileID: 100000, guid: b6fecef6c92b67147b638a07ef91195b, type: 2}
-  fireworks: {fileID: 100006, guid: ccbcfc705a39717429590a9f247ec30a, type: 2}
-  volumen: 50
 --- !u!135 &135792500614798628
 SphereCollider:
   m_ObjectHideFlags: 1

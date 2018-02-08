@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136271852288021266}
   - component: {fileID: 82341605062090274}
   - component: {fileID: 111411050950873642}
+  - component: {fileID: 114983053692108900}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Bumper
@@ -180,6 +181,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114983053692108900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482520156003420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088bb131cd382704494a7c94379e9005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steam: {fileID: 100000, guid: b6fecef6c92b67147b638a07ef91195b, type: 2}
 --- !u!136 &136271852288021266
 CapsuleCollider:
   m_ObjectHideFlags: 1

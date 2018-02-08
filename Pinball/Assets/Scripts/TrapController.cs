@@ -11,10 +11,12 @@ public class TrapController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        // Comprobamos que se ha alcanzado el ultimo nivel para aumentar la dificultad
-        if (GameManager.level == 5)
+        // Comprobamos que se ha alcanzado cierto nivel para aumentar la dificultad
+        if (GameManager.level == 4 && !GameManager.trap2Activated)
         {
-            // Si es el ultimo nivel, abrimos la trampilla
+            GameManager.trap2Activated = true;
+
+            // Abrimos la trampilla
             GetComponent<Animation>().Play();
         }
     }

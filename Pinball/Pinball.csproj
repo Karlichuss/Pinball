@@ -475,7 +475,8 @@
     <Compile Include="Assets\Scripts\PlungerController.cs" />
     <Compile Include="Assets\Scripts\PowerUpController.cs" />
     <Compile Include="Assets\Scripts\RFlipperScript.cs" />
-    <Compile Include="Assets\Scripts\ShipController.cs" />
+    <Compile Include="Assets\Scripts\Ship1Controller.cs" />
+    <Compile Include="Assets\Scripts\Ship2Controller.cs" />
     <Compile Include="Assets\Scripts\StickController.cs" />
     <Compile Include="Assets\Scripts\TrapController.cs" />
     <Compile Include="Assets\Scripts\WallController.cs" />

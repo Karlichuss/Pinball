@@ -22,4 +22,9 @@ public class GameManager : MonoBehaviour {
     // Control de la activacion de las trampas
     public static bool trap1Activated = false;
     public static bool trap2Activated = false;
+
+    // Control de los botones del leap motion
+    public static bool leftPressed = false;
+    public static bool rightPressed = false;
+    public static bool plungerPressed = false;
 }

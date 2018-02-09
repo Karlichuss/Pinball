@@ -11,13 +11,6 @@ public class InterfacePinball : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        // Ponemos los valores por defecto
-        GameManager.lives = 3;
-        GameManager.level = 1;
-        GameManager.score = 0;
-
-        // Iniciamos las animaciones
-
 
     }
 	

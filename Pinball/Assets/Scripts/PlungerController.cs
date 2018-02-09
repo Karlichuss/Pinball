@@ -23,7 +23,34 @@ public class PlungerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Action();
+        if (ballReady)
+        {
+            ballReady = true;
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if (power < maxPower)
+                {
+                    power += 50 * Time.deltaTime;
+                }
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                ball.GetComponent<Rigidbody>().AddForce(power * Vector3.forward);
+            }
+
+            if (GameManager.plungerPressed)
+            {
+                ball.GetComponent<Rigidbody>().AddForce(maxPower * Vector3.forward);
+            }
+
+            GameManager.plungerPressed = false;
+        }
+        else
+        {
+            ballReady = false;
+            power = 0.0f;
+        }
     }
 
     private void LateUpdate()
@@ -53,26 +80,6 @@ public class PlungerController : MonoBehaviour {
 
     public void Action()
     {
-        if (ballReady)
-        {
-            ballReady = true;
-            if (Input.GetKey(KeyCode.Space))
-            {
-                if (power < maxPower)
-                {
-                    power += 50 * Time.deltaTime;
-                }
-            }
-
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                ball.GetComponent<Rigidbody>().AddForce(power * Vector3.forward);
-            }
-        }
-        else
-        {
-            ballReady = false;
-            power = 0.0f;
-        }
+        GameManager.plungerPressed = true;
     }
 }

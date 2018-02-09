@@ -20,6 +20,16 @@ public class InterfaceMainMenu : MonoBehaviour
 
     public void Click()
     {
+        // Ponemos los valores por defecto
+        GameManager.lives = 3;
+        GameManager.level = 1;
+        GameManager.score = 0;
+        GameManager.trap1Activated = false;
+        GameManager.trap2Activated = false;
+        
+        // Reproducimos el sonido de la tecla pulsada
+        GetComponent<AudioSource>().Play();
+
         // Cargamos la escena del juego
         SceneManager.LoadScene("PinballCustom");
     }

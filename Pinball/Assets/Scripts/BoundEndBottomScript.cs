@@ -9,11 +9,6 @@ public class BoundEndBottomScript : MonoBehaviour
     public GameObject ball;
     public GameObject spawnPoint;
 
-    public GameObject powerUp1;
-    public GameObject powerUp2;
-    public GameObject powerUp3;
-    public GameObject powerUp4;
-
     // Use this for initialization
     void Start()
     {
@@ -34,8 +29,6 @@ public class BoundEndBottomScript : MonoBehaviour
             Destroy(collision.gameObject);
             // Restamos una vida
             GameManager.lives--;
-            // Reproducimos el sonido de lostlife
-            GetComponent<AudioSource>().Play();
 
             // Si aun nos quedan vidas, volvemos a colocar una nueva bola. Si no, Game Over.
             if (GameManager.lives != 0)

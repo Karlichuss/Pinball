@@ -11,7 +11,7 @@ public class LFlipperScript : MonoBehaviour {
     // Fuerza del golpe de impacto
     public float hitStrength = 30000;
     // Fuerza del flipper
-    public float flipperDamper = 300f;
+    public float flipperDamper = 1000f;
     // Nombre de la entrada
     public string inputName;
 
@@ -33,12 +33,19 @@ public class LFlipperScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetAxis(inputName) == 1)
+        if (Input.GetAxis(inputName) == 1 || GameManager.leftPressed)
         {
-            Action();
+            if (GameManager.LFlipperSoundPlay)
+            {
+                // Controlamos que se haga la orden solo una vez
+                GameManager.LFlipperSoundPlay = false;
+                // Reproducimos el sonido del flipper
+                GetComponent<AudioSource>().PlayDelayed(Time.deltaTime);
+            }
+            spring.targetPosition = pressedPosition;
         }
         else
-        {
+        { 
             GameManager.LFlipperSoundPlay = true;
             spring.targetPosition = restPosition;
         }
@@ -46,17 +53,12 @@ public class LFlipperScript : MonoBehaviour {
         hingeJoint.spring = spring;
         hingeJoint.useLimits = true;
 
-	}
+        GameManager.leftPressed = false;
+
+    }
 
     public void Action()
     {
-        if (GameManager.LFlipperSoundPlay)
-        {
-            // Controlamos que se haga la orden solo una vez
-            GameManager.LFlipperSoundPlay = false;
-            // Reproducimos el sonido del flipper
-            GetComponent<AudioSource>().PlayDelayed(Time.deltaTime);
-        }
-        spring.targetPosition = pressedPosition;
+        GameManager.leftPressed = true;
     }
 }

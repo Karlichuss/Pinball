@@ -1,9 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿///////////////////////////////
+// Práctica: Pinball
+// Alumno: Antonio Carlos Ordoñez Cintrano
+// Curso: 2017/2018
+// Fichero: GameManager.cs
+///////////////////////////////
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-    
+
+    #region Declaración de variables
+
     // Numero de vidas que le quedan al jugador
     public static int lives = 3;
     // Nivel
@@ -27,4 +34,7 @@ public class GameManager : MonoBehaviour {
     public static bool leftPressed = false;
     public static bool rightPressed = false;
     public static bool plungerPressed = false;
+
+    #endregion
+
 }

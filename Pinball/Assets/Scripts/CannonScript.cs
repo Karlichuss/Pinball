@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class CannonScript : MonoBehaviour {
 
+    #region Declaración de variables
+
+    // Particulas de explosión
     public GameObject explosion;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    #endregion
 
+    #region Métodos
+
+    /// <summary>
+    /// Método que es llamado cada vez que algo sale de la CollisionBox del GameObject
+    /// </summary>
+    /// <param name="other">Lo que sale de la CollisionBox</param>
     private void OnTriggerExit(Collider other)
     {
+        /// Si lo que sale tiene la tag Ball:
         if (other.gameObject.tag.Equals("Ball"))
         {
-            // Reproducimos el sonido de la explosion
+            ///     Reproducimos el sonido de la explosión
             GetComponent<AudioSource>().Play();
-            // Instanciamos las particulas de explosion
+            ///     Instanciamos las particulas de explosión
             Instantiate(explosion, GetComponent<Transform>().position, Quaternion.identity);
         }
     }
+
+    #endregion
+
 }

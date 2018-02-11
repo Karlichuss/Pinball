@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿///////////////////////////////
+// Práctica: Pinball
+// Alumno: Antonio Carlos Ordoñez Cintrano
+// Curso: 2017/2018
+// Fichero: InterfaceMainMenu.cs
+///////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,31 +13,26 @@ using UnityEngine.SceneManagement;
 public class InterfaceMainMenu : MonoBehaviour
 {
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    #region Métodos
+    
+    /// <summary>
+    /// Método que es llamado cuando se pulse el botón correspondiente
+    /// </summary>
     public void Click()
     {
-        // Ponemos los valores por defecto
+        /// Ponemos los valores por defecto
         GameManager.lives = 3;
         GameManager.level = 1;
         GameManager.score = 0;
         GameManager.trap1Activated = false;
         GameManager.trap2Activated = false;
         
-        // Reproducimos el sonido de la tecla pulsada
+        /// Reproducimos el sonido de la tecla pulsada
         GetComponent<AudioSource>().Play();
 
-        // Cargamos la escena del juego
+        /// Cargamos la escena del juego
         SceneManager.LoadScene("PinballCustom");
     }
+
+    #endregion
 }

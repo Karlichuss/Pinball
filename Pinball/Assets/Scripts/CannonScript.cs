@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿///////////////////////////////
+// Práctica: Pinball
+// Alumno: Antonio Carlos Ordoñez Cintrano
+// Curso: 2017/2018
+// Fichero: CannonScript.cs
+///////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
